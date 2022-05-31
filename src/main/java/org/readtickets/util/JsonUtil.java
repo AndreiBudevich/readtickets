@@ -26,12 +26,12 @@ public class JsonUtil {
         String jsonString = new String(array);
         int beginIndex = jsonString.indexOf("{\n" + "  \"tickets\": ") + 15;
         int endIndex = jsonString.indexOf("]", beginIndex) + 1;
-        return ReplaceAll(jsonString.substring(beginIndex, endIndex));
+        return replaceAllFields(jsonString.substring(beginIndex, endIndex));
 
 
     }
 
-    private static String ReplaceAll(String string) {
+    private static String replaceAllFields(String string) {
         return string.replaceAll("origin_name", "originName")
                 .replaceAll("departure_date", "departureDate")
                 .replaceAll("arrival_date", "arrivalDate")
