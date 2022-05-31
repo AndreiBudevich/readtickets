@@ -20,7 +20,7 @@ public class ReadTickets {
 
         Double percentile = getPercentile(tickets, MINUTES, 90);
 
-        System.out.println(averageFlightTime);
-        System.out.println(percentile);
+        System.out.printf("AverageFlightTime %s \n", averageFlightTime);
+        System.out.printf("Percentile %s", percentile);
     }
 }
