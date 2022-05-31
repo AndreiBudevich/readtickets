@@ -17,7 +17,7 @@ public class JsonUtil {
     private JsonUtil() {
     }
 
-    public static Ticket[] get(byte[] array) throws IOException {
+    public static Ticket[] getTickets(byte[] array) throws IOException {
         StringReader reader = new StringReader(getJsonString(array));
         return mapper.readValue(reader, Ticket[].class);
     }
