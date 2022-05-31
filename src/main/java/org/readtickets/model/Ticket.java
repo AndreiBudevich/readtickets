@@ -1,19 +1,29 @@
 package org.readtickets.model;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @JsonAutoDetect
 public class Ticket {
+
     private String origin;
     private String originName;
     private String destination;
     private String destinationName;
+
+    @JsonFormat(pattern = "yy.MM.dd")
     private LocalDate departureDate;
+
+    @JsonFormat(pattern = "H:mm")
     private LocalTime departureTime;
+
+    @JsonFormat(pattern = "yy.MM.dd")
     private LocalDate arrivalDate;
+
+    @JsonFormat(pattern = "H:mm")
     private LocalTime arrivalTime;
     private String carrier;
     private int stops;
