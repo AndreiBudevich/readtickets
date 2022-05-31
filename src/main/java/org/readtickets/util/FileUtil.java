@@ -9,7 +9,7 @@ public class FileUtil {
     private FileUtil() {
     }
 
-    public static byte[] get(String path) throws IOException {
+    public static byte[] readFileAllBytes(String path) throws IOException {
         return Files.readAllBytes(Paths.get(path));
     }
 }
